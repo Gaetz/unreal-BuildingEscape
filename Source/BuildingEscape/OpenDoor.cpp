@@ -20,6 +20,7 @@ void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
 
+    Owner = GetOwner();
 	IsDoorOpen = false;
 	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
 }
@@ -31,28 +32,25 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// Poll trogger volume
-	if(PressurePlate->IsOverlappingActor(ActorThatOpens) && !IsDoorOpen) 
+	if(PressurePlate->IsOverlappingActor(ActorThatOpens)) 
 	{
 		OpenDoor();
-		IsDoorOpen = true;
 	}
-	if(!(PressurePlate->IsOverlappingActor(ActorThatOpens)) && IsDoorOpen) 
+	if(IsDoorOpen && (GetWorld()->GetTimeSeconds() - DoorLastOpenTime >= DoorCloseDelay) && !PressurePlate->IsOverlappingActor(ActorThatOpens)) 
 	{
 		CloseDoor();
-		IsDoorOpen = false;
 	}
 }
 
 void UOpenDoor::OpenDoor()
 {
-    AActor* Owner = GetOwner();
-	FRotator Rotation = FRotator(OpenAngle, 0.0f, 0.0f);
-	Owner->SetActorRotation(Rotation);
+	Owner->SetActorRotation(FRotator(OpenAngle, 0.0f, 0.0f));
+	DoorLastOpenTime = GetWorld()->GetTimeSeconds();
+	IsDoorOpen = true;
 }
 
 void UOpenDoor::CloseDoor()
 {
-    AActor* Owner = GetOwner();
-	FRotator Rotation = FRotator(0.0f, 0.0f, 0.0f);
-	Owner->SetActorRotation(Rotation);
+	Owner->SetActorRotation(FRotator(0.0f, 0.0f, 0.0f));
+	IsDoorOpen = false;
 }
