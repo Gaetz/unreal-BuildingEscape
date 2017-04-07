@@ -63,20 +63,4 @@ DerivedDataCache/*
 
 # VS generated
 *.VC.db
-
-#Codelite/Kdevelop/Linux generated
-.codelite/
-.kdev4/
-BuildingEscape.kdev4
-BuildingEscape.pro
-BuildingEscape.workspace
-BuildingEscapeCodeCompletionFolders.txt
-BuildingEscapeCodeLitePreProcessor.txt
-BuildingEscapeConfig.pri
-BuildingEscapeDefines.pri
-BuildingEscapeHeader.pri
-BuildingEscapeIncludes.pri
-BuildingEscapeSource.pri
-CMakeLists.txt
-Makefile
-
+.vscode/
