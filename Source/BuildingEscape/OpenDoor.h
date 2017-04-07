@@ -22,7 +22,6 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-    void OpenDoor();
 
 private:
     UPROPERTY(VisibleAnywhere)
@@ -33,4 +32,12 @@ private:
 
     UPROPERTY(EditAnywhere)
     AActor* ActorThatOpens;
+
+    bool IsDoorOpen;
+
+    // Open door when triggered
+    void OpenDoor();
+
+    // Close door when triggered
+    void CloseDoor();
 };
