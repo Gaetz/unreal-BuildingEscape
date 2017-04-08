@@ -64,3 +64,21 @@ DerivedDataCache/*
 # VS generated
 *.VC.db
 .vscode/
+
+# Linux IDE generated
+.kdev4/
+BuildingEscape.kdev4
+BuildingEscape.pro
+BuildingEscape.workspace
+BuildingEscapeCodeCompletionFolders.txt
+BuildingEscapeCodeLitePreProcessor.txt
+BuildingEscapeConfig.pri
+BuildingEscapeDefines.pri
+BuildingEscapeHeader.pri
+BuildingEscapeIncludes.pri
+BuildingEscapeSource.pri
+CMakeLists.txt
+Makefile
+Source/BuildingEscape/.OpenDoor.cpp.kate-swp
+unreal-BuildingEscape.kdev4
+
