@@ -35,7 +35,7 @@ void ACountdown::UpdateTimerDisplay()
 	CountdownText->SetText(FString::FromInt(FMath::Max(CountdownTime, 0)));
 }
 
-void ACountdown::CountdownHasFinished()
+void ACountdown::CountdownHasFinished_Implementation()
 {
 	CountdownText->SetText(TEXT("GO!"));
 }

@@ -25,10 +25,17 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void UpdateTimerDisplay();
+
+	UFUNCTION(BlueprintNativeEvent)
 	void CountdownHasFinished();
+	virtual void CountdownHasFinished_Implementation();
+
 	void AdvanceTimer();
 
+	// How long the countdown will run, in seconds
+	UPROPERTY(EditAnywhere)
 	int32 CountdownTime;
+
 	UTextRenderComponent* CountdownText;
 	FTimerHandle CountdownTimerHandle;
 };
