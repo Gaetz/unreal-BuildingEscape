@@ -1,0 +1,9 @@
+{
+	"files.exclude": {
+		"C:/ArtFx/Dev/unreal-Test/FPS/.vs": true,
+		"C:/ArtFx/Dev/unreal-Test/FPS/.vscode": true,
+		"C:/ArtFx/Dev/unreal-Test/FPS/Content": true,
+		"C:/ArtFx/Dev/unreal-Test/FPS/Intermediate": true,
+		"C:/ArtFx/Dev/unreal-Test/FPS/Saved": true
+	}
+}
