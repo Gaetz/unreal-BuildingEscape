@@ -4,8 +4,6 @@
 #include "CollisionPawn.h"
 #include "Runtime/Engine/Classes/Components/SphereComponent.h"
 #include "Runtime/Engine/Classes/Components/StaticMeshComponent.h"
-#include "Runtime/Engine/Classes/GameFramework/SpringArmComponent.h"
-#include "Runtime/Engine/Classes/Camera/CameraComponent.h"
 #include "Runtime/CoreUObject/Public/UObject/ConstructorHelpers.h"
 #include "Runtime/Engine/Classes/Components/InputComponent.h"
 
@@ -40,20 +38,23 @@ ACollisionPawn::ACollisionPawn()
 		OurParticleSystem->SetTemplate(ParticleAsset.Object);
 	}
 
-	USpringArmComponent *SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraAttachmentArm"));
+	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraAttachmentArm"));
 	SpringArm->SetupAttachment(RootComponent);
 	SpringArm->RelativeRotation = FRotator(-45.f, 0.f, 0.f);
 	SpringArm->TargetArmLength = 400.f;
 	SpringArm->bEnableCameraLag = true;
 	SpringArm->CameraLagSpeed = 3.f;
 
-	UCameraComponent *Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("ActualCamera"));
+	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("ActualCamera"));
 	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 
 	OurMovementComponent = CreateDefaultSubobject<UCollidingPawnMovementComponent>(TEXT("CustomMovementComponent"));
 	OurMovementComponent->UpdatedComponent = RootComponent;
+
+	bZoomingIn = false;
+	ZoomFactor = 1.f;
 }
 
 // Called when the game starts or when spawned
@@ -68,6 +69,18 @@ void ACollisionPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (bZoomingIn)
+	{
+		ZoomFactor += DeltaTime / 0.5f;         //Zoom in over half a second
+	}
+	else
+	{
+		ZoomFactor -= DeltaTime / 0.25f;        //Zoom out over a quarter of a second
+	}
+	ZoomFactor = FMath::Clamp<float>(ZoomFactor, 0.0f, 1.0f);
+	//Blend our camera's FOV and our SpringArm's length based on ZoomFactor
+	Camera->FieldOfView = FMath::Lerp<float>(90.0f, 60.0f, ZoomFactor);
+	SpringArm->TargetArmLength = FMath::Lerp<float>(400.0f, 300.0f, ZoomFactor);
 }
 
 // Called to bind functionality to input
@@ -76,10 +89,13 @@ void ACollisionPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	PlayerInputComponent->BindAction("ParticleToggle", IE_Pressed, this, &ACollisionPawn::ParticleToggle);
+	PlayerInputComponent->BindAction("Zoom", IE_Pressed, this, &ACollisionPawn::ZoomIn);
+	PlayerInputComponent->BindAction("Zoom", IE_Released, this, &ACollisionPawn::ZoomOut);
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &ACollisionPawn::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ACollisionPawn::MoveRight);
 	PlayerInputComponent->BindAxis("Turn", this, &ACollisionPawn::Turn);
+	PlayerInputComponent->BindAxis("TurnYaw", this, &ACollisionPawn::TurnYaw);
 }
 
 UPawnMovementComponent* ACollisionPawn::GetMovementComponent() const
@@ -110,12 +126,29 @@ void ACollisionPawn::Turn(float AxisValue)
 	SetActorRotation(NewRotation);
 }
 
+void ACollisionPawn::TurnYaw(float AxisValue)
+{
+	FRotator NewRotation = GetActorRotation();
+	NewRotation.Pitch += AxisValue;
+	SetActorRotation(NewRotation);
+}
+
 void ACollisionPawn::ParticleToggle()
 {
 	if (OurParticleSystem && OurParticleSystem->Template)
 	{
 		OurParticleSystem->ToggleActive();
 	}
+}
+
+void ACollisionPawn::ZoomIn()
+{
+	bZoomingIn = true;
+}
+
+void ACollisionPawn::ZoomOut()
+{
+	bZoomingIn = false;
 }
 
 
