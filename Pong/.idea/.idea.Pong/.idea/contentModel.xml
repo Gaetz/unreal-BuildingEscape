@@ -43684,6 +43684,8 @@
           <e p="ColoredTexture.h" t="Include" />
           <e p="OutTrigger.cpp" t="Include" />
           <e p="OutTrigger.h" t="Include" />
+          <e p="Paddle.cpp" t="Include" />
+          <e p="Paddle.h" t="Include" />
           <e p="Pong.Build.cs" t="Include" />
           <e p="Pong.cpp" t="Include" />
           <e p="Pong.h" t="Include" />

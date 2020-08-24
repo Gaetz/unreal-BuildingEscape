@@ -23,30 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2da4222e-dfad-415c-8db0-94a3737dc922" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Pong/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/Profile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Assets/Profile.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/BP_UserProfile.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PongGameMode.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_UserProfile.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/Ball.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/Ball.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/ColoredTexture.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/ColoredTexture.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/OutTrigger.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/OutTrigger.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/PongStateBase.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/PongStateBase.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/UserProfile.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/UserProfile.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/Walls.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Pong/Walls.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_Paddle.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Pong/Paddle.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Pong/Paddle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_PongGameMode.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_PongGameMode.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Lvl_Gameplay.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Lvl_Gameplay.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Lvl_Gameplay_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Lvl_Gameplay_BuiltData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Pong/Ball.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Pong/Ball.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Pong/Ball.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Pong/Ball.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Pong/PongGameModeBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Pong/PongGameModeBase.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,21 +49,28 @@
     <setting file="file://$PROJECT_DIR$/Source/Pong/PongStateBase.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/PongGameModeBase.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/PongStateBase.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/UserProfile.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/UserProfile.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/PongGameModeBase.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/UObject/UnrealType.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Pong/Walls.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Pong/Walls.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/Ball.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/Ball.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Misc/AssertionMacros.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/UObject/UObjectBase.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/OutTrigger.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Engine/Classes/GameFramework/DefaultPawn.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/OutTrigger.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/ColoredTexture.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/UObject/UnrealType.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Pong/Paddle.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Pong/Paddle.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Delegates/DelegateBase.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Core/Public/Delegates/DelegateSignatureImpl.inl" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/Pong/Walls.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Pong/ColoredTexture.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Source/Pong/Walls.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -87,14 +83,16 @@
         <option value="$PROJECT_DIR$/Source/Pong/PongStateBase.cpp" />
         <option value="$PROJECT_DIR$/Source/Pong/Walls.h" />
         <option value="$PROJECT_DIR$/Source/Pong/Walls.cpp" />
-        <option value="$PROJECT_DIR$/Source/Pong/Ball.h" />
-        <option value="$PROJECT_DIR$/Source/Pong/Ball.cpp" />
         <option value="$PROJECT_DIR$/Source/Pong/BallOutListener.cpp" />
         <option value="$PROJECT_DIR$/Source/Pong/OutTrigger.h" />
         <option value="$PROJECT_DIR$/Source/Pong/BallOutListener.h" />
         <option value="$PROJECT_DIR$/Source/Pong/PongGameModeBase.h" />
-        <option value="$PROJECT_DIR$/Source/Pong/PongGameModeBase.cpp" />
         <option value="$PROJECT_DIR$/Source/Pong/OutTrigger.cpp" />
+        <option value="$PROJECT_DIR$/Source/Pong/Ball.h" />
+        <option value="$PROJECT_DIR$/Source/Pong/Ball.cpp" />
+        <option value="$PROJECT_DIR$/Source/Pong/PongGameModeBase.cpp" />
+        <option value="$PROJECT_DIR$/Source/Pong/Paddle.h" />
+        <option value="$PROJECT_DIR$/Source/Pong/Paddle.cpp" />
       </list>
     </option>
   </component>
@@ -340,7 +338,8 @@
       <updated>1598087027357</updated>
       <workItem from="1598087033667" duration="21380000" />
       <workItem from="1598243213079" duration="2344000" />
-      <workItem from="1598245603053" duration="12657000" />
+      <workItem from="1598245603053" duration="13045000" />
+      <workItem from="1598296397979" duration="7698000" />
     </task>
     <servers />
   </component>
@@ -371,85 +370,85 @@
     </state>
     <state width="537" height="466" key="DebuggerActiveHint/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598273805225" />
     <state width="447" height="466" key="DebuggerActiveHint/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598247201499" />
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1598274036453">
+    <state width="1877" height="379" key="GridCell.Tab.0.bottom" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036453" />
+    <state width="1877" height="379" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1598274036453">
+    <state width="1877" height="379" key="GridCell.Tab.0.center" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036453" />
+    <state width="1877" height="379" key="GridCell.Tab.0.center/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1598274036453">
+    <state width="1877" height="379" key="GridCell.Tab.0.left" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036453" />
+    <state width="1877" height="379" key="GridCell.Tab.0.left/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995809" />
-    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1598274036453">
+    <state width="1877" height="379" key="GridCell.Tab.0.right" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036453" />
+    <state width="1877" height="379" key="GridCell.Tab.0.right/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1598274036453">
+    <state width="1877" height="379" key="GridCell.Tab.1.bottom" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036453" />
+    <state width="1877" height="379" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1598274036453">
+    <state width="1877" height="379" key="GridCell.Tab.1.center" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036453" />
+    <state width="1877" height="379" key="GridCell.Tab.1.center/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1598274036453">
+    <state width="1877" height="379" key="GridCell.Tab.1.left" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036453" />
+    <state width="1877" height="379" key="GridCell.Tab.1.left/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1598274036453">
+    <state width="1877" height="379" key="GridCell.Tab.1.right" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036453" />
+    <state width="1877" height="379" key="GridCell.Tab.1.right/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.2.bottom" timestamp="1598274036454">
+    <state width="1877" height="379" key="GridCell.Tab.2.bottom" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036454" />
+    <state width="1877" height="379" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.2.center" timestamp="1598274036454">
+    <state width="1877" height="379" key="GridCell.Tab.2.center" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.2.center/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036454" />
+    <state width="1877" height="379" key="GridCell.Tab.2.center/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.2.center/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.2.left" timestamp="1598274036454">
+    <state width="1877" height="379" key="GridCell.Tab.2.left" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.2.left/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036454" />
+    <state width="1877" height="379" key="GridCell.Tab.2.left/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.2.left/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.2.right" timestamp="1598274036454">
+    <state width="1877" height="379" key="GridCell.Tab.2.right" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.2.right/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036454" />
+    <state width="1877" height="379" key="GridCell.Tab.2.right/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.2.right/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.3.bottom" timestamp="1598274036454">
+    <state width="1877" height="379" key="GridCell.Tab.3.bottom" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.3.bottom/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036454" />
+    <state width="1877" height="379" key="GridCell.Tab.3.bottom/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.3.bottom/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.3.center" timestamp="1598274036454">
+    <state width="1877" height="379" key="GridCell.Tab.3.center" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.3.center/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036454" />
+    <state width="1877" height="379" key="GridCell.Tab.3.center/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.3.center/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.3.left" timestamp="1598274036454">
+    <state width="1877" height="379" key="GridCell.Tab.3.left" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.3.left/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036454" />
+    <state width="1877" height="379" key="GridCell.Tab.3.left/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.3.left/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
-    <state width="1877" height="352" key="GridCell.Tab.3.right" timestamp="1598274036454">
+    <state width="1877" height="379" key="GridCell.Tab.3.right" timestamp="1598305184192">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="352" key="GridCell.Tab.3.right/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598274036454" />
+    <state width="1877" height="379" key="GridCell.Tab.3.right/0.0.1920.1050/1920.-371.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598305184192" />
     <state width="1877" height="352" key="GridCell.Tab.3.right/0.0.1920.1050/1920.-743.1080.1920/-1920.0.1920.1080@0.0.1920.1050" timestamp="1598263995810" />
     <state x="616" y="178" width="672" height="676" key="search.everywhere.popup" timestamp="1598272124133">
       <screen x="0" y="0" width="1920" height="1050" />

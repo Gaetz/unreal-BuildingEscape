@@ -8,7 +8,7 @@ ABall::ABall() : Speed(-400)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	Root = CreateDefaultSubobject<USceneComponent>("RootBlop");
+	Root = CreateDefaultSubobject<USceneComponent>("Root");
 
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>("BaseMeshComponent");
 	auto MeshAsset = ConstructorHelpers::FObjectFinder<UStaticMesh>(TEXT("StaticMesh'/Engine/BasicShapes/Cube.Cube'"));
@@ -25,7 +25,6 @@ ABall::ABall() : Speed(-400)
 	RootComponent = Root;
 	Mesh->SetupAttachment(Root);
 	Collider->SetupAttachment(Root);
-	
 }
 
 void ABall::SetSpeed(float SpeedP)

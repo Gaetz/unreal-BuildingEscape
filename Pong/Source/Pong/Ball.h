@@ -8,7 +8,7 @@
 #include "Ball.generated.h"
 
 UCLASS()
-class PONG_API ABall : public AActor
+class PONG_API ABall final : public AActor
 {
 	GENERATED_BODY()
 	

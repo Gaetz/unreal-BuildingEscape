@@ -17,7 +17,8 @@ void APongGameModeBase::BeginPlay()
 	*/
 	
 	// Spawn Ball
-	const FTransform SpawnLocation;
+	FTransform SpawnLocation;
+	SpawnLocation.AddToTranslation(FVector(-60, 0, 0));
 	Ball = GetWorld()->SpawnActor<ABall>(ABall::StaticClass(), SpawnLocation);
 }
 
@@ -28,6 +29,9 @@ ABall* APongGameModeBase::GetBall() const
 
 void APongGameModeBase::ResetBall()
 {
-	Ball->SetActorLocation(FVector::ZeroVector);
+	auto Location = Ball->GetActorLocation();
+	Location.Y = 0;
+	Location.Z = 0;
+	Ball->SetActorLocation(Location);
 }
 
