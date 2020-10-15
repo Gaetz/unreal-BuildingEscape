@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Gamedev\Lab\unreal-training\Pong" t="IncludeFlat">
+      <e p="Config" t="Include">
+        <e p="DefaultEditor.ini" t="Include" />
+        <e p="DefaultEngine.ini" t="Include" />
+        <e p="DefaultGame.ini" t="Include" />
+        <e p="DefaultInput.ini" t="Include" />
+      </e>
+      <e p="Engine" t="Include" />
+      <e p="Games" t="Include" />
+      <e p="Intermediate\Build\Unused" t="ExcludeRecursive" />
+      <e p="Intermediate\ProjectFiles" t="IncludeRecursive">
+        <e p="Pong.vcxproj" t="IncludeRecursive" />
+        <e p="UE4.vcxproj" t="IncludeRecursive" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Pong.sln" t="IncludeFlat" />
+      <e p="Pong.uproject" t="Include" />
+      <e p="Source" t="Include">
+        <e p="Pong" t="Include">
+          <e p="Ball.cpp" t="Include" />
+          <e p="Ball.h" t="Include" />
+          <e p="ColoredTexture.cpp" t="Include" />
+          <e p="ColoredTexture.h" t="Include" />
+          <e p="OutTrigger.cpp" t="Include" />
+          <e p="OutTrigger.h" t="Include" />
+          <e p="Paddle.cpp" t="Include" />
+          <e p="Paddle.h" t="Include" />
+          <e p="Pong.Build.cs" t="Include" />
+          <e p="Pong.cpp" t="Include" />
+          <e p="Pong.h" t="Include" />
+          <e p="PongGameModeBase.cpp" t="Include" />
+          <e p="PongGameModeBase.h" t="Include" />
+          <e p="PongStateBase.cpp" t="Include" />
+          <e p="PongStateBase.h" t="Include" />
+          <e p="UserProfile.cpp" t="Include" />
+          <e p="UserProfile.h" t="Include" />
+          <e p="Walls.cpp" t="Include" />
+          <e p="Walls.h" t="Include" />
+        </e>
+        <e p="Pong.Target.cs" t="Include" />
+        <e p="PongEditor.Target.cs" t="Include" />
+      </e>
+      <e p="Visualizers" t="Include" />
+    </e>
     <e p="C:\Program Files\Epic Games\UE_4.25\Engine\Config" t="Include">
       <e p="Android" t="Include">
         <e p="AndroidEngine.ini" t="Include" />
@@ -43659,49 +43703,6 @@
       <e p="UE4Game.Target.cs" t="Include" />
     </e>
     <e p="C:\Users\gaetz\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\gaetz\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\ReSharperHost\v202\SolutionCaches\_Pong.-1088444690.00" t="ExcludeRecursive" />
-    <e p="D:\Dev\Lab\unreal-training\Pong" t="IncludeFlat">
-      <e p="Config" t="Include">
-        <e p="DefaultEditor.ini" t="Include" />
-        <e p="DefaultEngine.ini" t="Include" />
-        <e p="DefaultGame.ini" t="Include" />
-      </e>
-      <e p="Engine" t="Include" />
-      <e p="Games" t="Include" />
-      <e p="Intermediate\Build\Unused" t="ExcludeRecursive" />
-      <e p="Intermediate\ProjectFiles" t="IncludeRecursive">
-        <e p="Pong.vcxproj" t="IncludeRecursive" />
-        <e p="UE4.vcxproj" t="IncludeRecursive" />
-      </e>
-      <e p="packages" t="ExcludeRecursive" />
-      <e p="Pong.sln" t="IncludeFlat" />
-      <e p="Pong.uproject" t="Include" />
-      <e p="Source" t="Include">
-        <e p="Pong" t="Include">
-          <e p="Ball.cpp" t="Include" />
-          <e p="Ball.h" t="Include" />
-          <e p="ColoredTexture.cpp" t="Include" />
-          <e p="ColoredTexture.h" t="Include" />
-          <e p="OutTrigger.cpp" t="Include" />
-          <e p="OutTrigger.h" t="Include" />
-          <e p="Paddle.cpp" t="Include" />
-          <e p="Paddle.h" t="Include" />
-          <e p="Pong.Build.cs" t="Include" />
-          <e p="Pong.cpp" t="Include" />
-          <e p="Pong.h" t="Include" />
-          <e p="PongGameModeBase.cpp" t="Include" />
-          <e p="PongGameModeBase.h" t="Include" />
-          <e p="PongStateBase.cpp" t="Include" />
-          <e p="PongStateBase.h" t="Include" />
-          <e p="UserProfile.cpp" t="Include" />
-          <e p="UserProfile.h" t="Include" />
-          <e p="Walls.cpp" t="Include" />
-          <e p="Walls.h" t="Include" />
-        </e>
-        <e p="Pong.Target.cs" t="Include" />
-        <e p="PongEditor.Target.cs" t="Include" />
-      </e>
-      <e p="Visualizers" t="Include" />
-    </e>
+    <e p="C:\Users\gaetz\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Pong.-906358179.00" t="ExcludeRecursive" />
   </component>
 </project>
