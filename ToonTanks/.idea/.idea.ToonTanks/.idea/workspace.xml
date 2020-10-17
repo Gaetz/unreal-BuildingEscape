@@ -4,30 +4,97 @@
     <projectFile>Intermediate/ProjectFiles/ToonTanks.vcxproj</projectFile>
     <projectFile>Intermediate/ProjectFiles/UE4.vcxproj</projectFile>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f447f0e4-42c4-4921-8ac9-ad227fde83d2" name="Default Changelist" comment="" />
+    <list default="true" id="f447f0e4-42c4-4921-8ac9-ad227fde83d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ToonTanks/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Actors/BP_ProjectileBase.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/GameModes/BP_GameModeBase.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/PlayerControllers/BP_PlayerController.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Widgets/WBP_GameEnd.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/Blueprints/Widgets/WBP_GameStart.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/Actors/ProjectileBase.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/Actors/ProjectileBase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/Components/HealthComponent.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/Components/HealthComponent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/GameModes/TankGameModeBase.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/GameModes/TankGameModeBase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTurret.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTurret.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/PlayerControllers/PlayerControllerBase.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ToonTanks/PlayerControllers/PlayerControllerBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ToonTanks/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToonTanks/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ToonTanks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ToonTanks/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Pawns/BP_PawnTank.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Pawns/BP_PawnTank.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Pawns/BP_PawnTurret.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Pawns/BP_PawnTurret.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/Main.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/Main.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/Main_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/Main_BuiltData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTank.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTank.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTank.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTank.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnBase.cpp" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/Actors/ProjectileBase.h" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/Actors/ProjectileBase.cpp" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/Components/HealthComponent.h" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTurret.h" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/Components/HealthComponent.cpp" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/PlayerControllers/PlayerControllerBase.h" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/PlayerControllers/PlayerControllerBase.cpp" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/GameModes/TankGameModeBase.h" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/GameModes/TankGameModeBase.cpp" />
         <option value="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnBase.h" />
-        <option value="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTank.cpp" />
         <option value="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTank.h" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTurret.cpp" />
+        <option value="$PROJECT_DIR$/Source/ToonTanks/Pawns/PawnTank.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1iWvAa3AvkibKdXCwMOxQdPcEML" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3499006" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3001988" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -354,15 +421,98 @@
       <option name="presentableId" value="Default" />
       <updated>1602036025160</updated>
       <workItem from="1602036029771" duration="5567000" />
+      <workItem from="1602923867525" duration="22298000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2208" y="413" key="#Notifications" timestamp="1602923933116">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state x="2208" y="413" key="#Notifications/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602923933116" />
+    <state width="1037" height="378" key="GridCell.Tab.0.bottom" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.0.center" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.0.left" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.0.right" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.1.bottom" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.1.center" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.1.center/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.1.left" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.1.left/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.1.right" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.1.right/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.2.bottom" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.2.bottom/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.2.center" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.2.center/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.2.left" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.2.left/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.2.right" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.2.right/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.3.bottom" timestamp="1602975532649">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.3.bottom/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532649" />
+    <state width="1037" height="378" key="GridCell.Tab.3.center" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.3.center/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.3.left" timestamp="1602975532648">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.3.left/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532648" />
+    <state width="1037" height="378" key="GridCell.Tab.3.right" timestamp="1602975532649">
+      <screen x="1920" y="-371" width="1080" height="1920" />
+    </state>
+    <state width="1037" height="378" key="GridCell.Tab.3.right/0.0.1920.1050/-1920.0.1920.1080/1920.-371.1080.1920@1920.-371.1080.1920" timestamp="1602975532649" />
   </component>
 </project>

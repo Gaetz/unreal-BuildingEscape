@@ -23,15 +23,18 @@ class TOONTANKS_API APawnTank : public APawnBase
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* Camera;
 
-	FVector MoveDirection;
-	FQuat RotateDirection;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement", meta = (AllowPrivateAccess = "true"))
 	float MoveSpeed = 100.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement", meta = (AllowPrivateAccess = "true"))
 	float RotateSpeed = 100.0f;
 
+	APlayerController* PLayerController;
+	FVector MoveDirection;
+	FQuat RotateDirection;
+	bool bIsPlayerAlive;
+
+	
 	void ComputeMoveInput(float Value);
 	void ComputeRotateInput(float Value);
 	void Move();
@@ -40,14 +43,12 @@ class TOONTANKS_API APawnTank : public APawnBase
 public:
 	APawnTank();
 	
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	virtual void HandleDestruction() override;
+	bool GetIsPlayerAlive() const;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
 };
