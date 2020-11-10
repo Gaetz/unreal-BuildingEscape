@@ -2,37 +2,17 @@
 
 
 #include "Hero.h"
-
-#include "Components/SphereComponent.h"
-#include "Components/PrimitiveComponent.h"
 #include "NiagaraComponent.h"
 
 // Sets default values
-AHero::AHero()
+AHero::AHero() : AHeroBase()
 {
- 	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-	
-	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-	RootComponent = Root;
-
-	SphereCollider = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollider"));
-	SphereCollider->InitSphereRadius(50.0f);
-	SphereCollider->SetCollisionProfileName(TEXT("Pawn"));
-	SphereCollider->SetupAttachment(Root);
-
-	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-	Mesh->SetupAttachment(Root);
-
-	ParticleSystem = CreateDefaultSubobject<UNiagaraComponent>(TEXT("ParticleSystem"));
-	ParticleSystem->SetupAttachment(Root);
 }
 
 // Called when the game starts or when spawned
 void AHero::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 // Called every frame
@@ -64,13 +44,5 @@ void AHero::Tick(float DeltaTime)
 	}
 	
 	SetActorRelativeLocation(NewLocation);
-}
-
-// Called to bind functionality to input
-void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-	InputComponent->BindAxis("Horizontal", this, &AHero::SetHorizontalInput);
-	InputComponent->BindAxis("Vertical", this, &AHero::SetVerticalInput);
 }
 

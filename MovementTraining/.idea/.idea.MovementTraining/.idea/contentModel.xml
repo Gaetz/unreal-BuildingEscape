@@ -43397,6 +43397,7 @@
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEngine.ini" t="Include" />
         <e p="DefaultGame.ini" t="Include" />
+        <e p="DefaultInput.ini" t="Include" />
       </e>
       <e p="Engine" t="Include" />
       <e p="Games" t="Include" />
@@ -43412,6 +43413,10 @@
         <e p="MovementTraining" t="Include">
           <e p="Hero.cpp" t="Include" />
           <e p="Hero.h" t="Include" />
+          <e p="HeroBase.cpp" t="Include" />
+          <e p="HeroBase.h" t="Include" />
+          <e p="HeroPhysics.cpp" t="Include" />
+          <e p="HeroPhysics.h" t="Include" />
           <e p="MovementTraining.Build.cs" t="Include" />
           <e p="MovementTraining.cpp" t="Include" />
           <e p="MovementTraining.h" t="Include" />
