@@ -30,3 +30,12 @@ void AHeroBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	InputComponent->BindAxis("Horizontal", this, &AHeroBase::SetHorizontalInput);
 	InputComponent->BindAxis("Vertical", this, &AHeroBase::SetVerticalInput);
 }
+
+float AHeroBase::MoveTowards(const float Current, const float Target, const float MaxDelta) const
+{
+	if(FMath::Abs(Target - Current) <= MaxDelta)
+	{
+		return Target;
+	}
+	return Current + FMath::Sign(Target - Current) * MaxDelta;
+}

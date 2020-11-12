@@ -24,24 +24,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1106d457-5bd9-4f24-9be4-f2d0579cb952" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_GMMovement.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_GMPhysics.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_HeroPhysics.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Blueprints/BP_HeroSliding.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MovementTraining/HeroBase.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MovementTraining/HeroBase.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MovementTraining/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MovementTraining/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MovementTraining/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MovementTraining/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_MovementHero.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_MovementTrainingGM.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Movement01_Sliding.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Movement01_Sliding.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Movement01_Sliding_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Movement01_Sliding_BuiltData.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_HeroPhysics.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_HeroPhysics.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Movement02_Physics.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Movement02_Physics.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Movement02_Physics_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Movement02_Physics_BuiltData.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MovementTraining/Hero.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MovementTraining/Hero.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MovementTraining/Hero.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MovementTraining/Hero.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MovementTraining/HeroBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MovementTraining/HeroBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MovementTraining/HeroBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MovementTraining/HeroBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +48,8 @@
         <option value="$PROJECT_DIR$/Source/MovementTraining/Hero.cpp" />
         <option value="$PROJECT_DIR$/Source/MovementTraining/Hero.h" />
         <option value="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.h" />
-        <option value="$PROJECT_DIR$/Source/MovementTraining/HeroBase.h" />
         <option value="$PROJECT_DIR$/Source/MovementTraining/HeroBase.cpp" />
+        <option value="$PROJECT_DIR$/Source/MovementTraining/HeroBase.h" />
         <option value="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.cpp" />
       </list>
     </option>
@@ -304,6 +294,7 @@
       <workItem from="1604815631465" duration="4158000" />
       <workItem from="1604821011393" duration="5229000" />
       <workItem from="1604987449788" duration="7103000" />
+      <workItem from="1605162257660" duration="5757000" />
     </task>
     <servers />
   </component>

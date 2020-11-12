@@ -40,9 +40,10 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-private:
+protected:
 	virtual void SetHorizontalInput(const float AxisValue);
 	virtual void SetVerticalInput(const float AxisValue);
+	float MoveTowards(const float Current, const float Target, const float MaxDelta) const;
 };
 
 inline void AHeroBase::SetHorizontalInput(const float AxisValue)

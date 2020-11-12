@@ -19,17 +19,29 @@ void AHeroPhysics::BeginPlay()
 void AHeroPhysics::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    //GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Velocity: %s"), *Velocity.ToString()));
 
-    FVector2D Input = PlayerInput;
-    Input.Normalize();
+    FVector Input = FVector(PlayerInput.X, PlayerInput.Y, 0);
+    Input = Input.GetClampedToMaxSize(1.0f);
+    const FVector DesiredVelocity = Input * MaxSpeed;
 
-    const FVector Acceleration = FVector(Input.X, Input.Y, 0.0f) * AccelerationFactor;
-    Velocity += Acceleration * DeltaTime;
-    Velocity = FVector(FMath::Clamp(Velocity.X, -MaxSpeed, MaxSpeed), FMath::Clamp(Velocity.Y, -MaxSpeed, MaxSpeed), 0.0f);
-    Root->SetPhysicsLinearVelocity(Velocity, true);
+    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("DesiredVelocity: %s"), *DesiredVelocity.ToString()));
 
     
+    const float Acceleration = AccelerationFactor * DeltaTime;
+    Velocity.X = MoveTowards(Velocity.X, DesiredVelocity.X, Acceleration);
+    Velocity.Y = MoveTowards(Velocity.Y, DesiredVelocity.Y, Acceleration);
 
+    Root->SetPhysicsLinearVelocity(Velocity, true);
+
+    // Clamp physical velocity
+    FVector PhysVelocity = Root->GetPhysicsLinearVelocity();
+    PhysVelocity.X = FMath::Clamp(PhysVelocity.X, -MaxSpeed, MaxSpeed);
+    PhysVelocity.Y = FMath::Clamp(PhysVelocity.Y, -MaxSpeed, MaxSpeed);
+    Root->SetPhysicsLinearVelocity(PhysVelocity);
+}
+
+void AHeroPhysics::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+    Super::SetupPlayerInputComponent(PlayerInputComponent);
     
 }
