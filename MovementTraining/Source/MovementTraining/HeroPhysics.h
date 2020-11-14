@@ -27,7 +27,8 @@ public:
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
 	bool IsGrounded() const;
-
+	void SetGrounded(bool bGroundedP);
+	
 	USphereComponent* GetRootComponent();
 	
 private:
@@ -36,7 +37,10 @@ private:
 	class UHeroMovementComponent* Movement;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Movement, meta = (AllowPrivateAccess = "true"))
-	float Acceleration = 1000;
+	float Acceleration = 50;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Movement, meta = (AllowPrivateAccess = "true"))
+	float AirAcceleration = 5;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Movement, meta = (AllowPrivateAccess = "true"))
 	float MaxSpeed = 2000;
@@ -48,14 +52,17 @@ private:
 	// Jump
 	UPROPERTY(EditAnywhere, Category="Movement")
 	float JumpHeight;
+
+	UPROPERTY(EditAnywhere, Category="Movement")
+	int NumberOfJumps = 2;
 	
 	void OnJump();
 	bool bGrounded;
 
 	// Collisions
-	
 	UFUNCTION()
 	void OnHit(AActor* Self, AActor* Other, FVector Normal, const FHitResult& Hit);
+	
 	/*
 	UFUNCTION()
 	void BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,

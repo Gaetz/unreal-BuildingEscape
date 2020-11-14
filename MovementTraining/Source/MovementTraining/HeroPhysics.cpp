@@ -19,27 +19,13 @@ void AHeroPhysics::BeginPlay()
     Super::BeginPlay();
     Root->SetSimulatePhysics(true);
     Root->SetNotifyRigidBodyCollision(true);
-    Movement->SetActorParameters(Acceleration, MaxSpeed, JumpHeight);
+    Movement->SetActorParameters(Acceleration, MaxSpeed, JumpHeight, NumberOfJumps, AirAcceleration);
     OnActorHit.AddDynamic(this, &AHeroPhysics::OnHit);
 }
 
 void AHeroPhysics::Tick(float DeltaTime)
 {    
     Super::Tick(DeltaTime);
-
-    
-    
-/*
-    if(IsJumpInput)
-    {
-        Jump();
-        IsJumpInput = false;
-    }
-
-
-    */
-    // Reset hit
-    bGrounded = false;
 }
 
 void AHeroPhysics::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -53,6 +39,11 @@ void AHeroPhysics::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 bool AHeroPhysics::IsGrounded() const
 {
     return bGrounded;
+}
+
+void AHeroPhysics::SetGrounded(bool bGroundedP)
+{
+    bGrounded = bGroundedP;
 }
 
 USphereComponent* AHeroPhysics::GetRootComponent()
@@ -92,10 +83,7 @@ void AHeroPhysics::OnJump()
 
 void AHeroPhysics::OnHit(AActor* Self, AActor* Other, FVector Normal, const FHitResult& Hit)
 {
-    if(FVector::DotProduct(Normal, GetActorUpVector()) > 0.99)
-    {
-        bGrounded = true;
-    }
+    bGrounded |= Hit.ImpactNormal.Z >= 0.9f;
 }
 
 /*

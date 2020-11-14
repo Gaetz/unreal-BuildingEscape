@@ -16,11 +16,14 @@ void UHeroMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
     {
         return;
     }
+    AHeroPhysics* Owner = Cast<AHeroPhysics>(PawnOwner);
 
+    
     // Get (and then clear) the movement vector that we set in ACollidingPawn::Tick
     const FVector DesiredMovement = ConsumeInputVector().GetClampedToMaxSize(1.0f) * DeltaTime * MaxSpeed;
-    Velocity.X = AHeroBase::MoveTowards(Velocity.X, DesiredMovement.X, Acceleration * DeltaTime);
-    Velocity.Y = AHeroBase::MoveTowards(Velocity.Y, DesiredMovement.Y, Acceleration * DeltaTime);
+    const float RealAcceleration = Owner->IsGrounded() ? Acceleration : AirAcceleration;
+    Velocity.X = AHeroBase::MoveTowards(Velocity.X, DesiredMovement.X, RealAcceleration * DeltaTime);
+    Velocity.Y = AHeroBase::MoveTowards(Velocity.Y, DesiredMovement.Y, RealAcceleration * DeltaTime);
 
     if (!Velocity.IsNearlyZero())
     {
@@ -35,34 +38,27 @@ void UHeroMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
     }
 
     // Jump
-    AHeroPhysics* Owner = Cast<AHeroPhysics>(PawnOwner);
-    if (bJumpInput && Owner->IsGrounded())
+    if(Owner->IsGrounded())
     {
-        //Owner->SetJumpInput(false);
+        JumpPhase = 0;
+    }
+    
+    if (bJumpInput && (Owner->IsGrounded() || JumpPhase < NumberOfJumps))
+    {
+        ++JumpPhase;
         Jump(Owner->GetRootComponent());
     }
     bJumpInput = false;
-
-    /*
-    FVector Input = FVector(PlayerInput.X, PlayerInput.Y, 0);
-    Input = Input.GetClampedToMaxSize(1.0f);
-    const FVector DesiredVelocity = Input * MaxSpeed;
-    
-    const float Acceleration = AccelerationFactor * DeltaTime;
-    Velocity.X = MoveTowards(Velocity.X, DesiredVelocity.X, Acceleration);
-    Velocity.Y = MoveTowards(Velocity.Y, DesiredVelocity.Y, Acceleration);
-    //GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Velocity: %s"), *Velocity.ToString()));
-
-    
-    Root->AddForce(Velocity * Root->GetBodyInstance()->GetBodyMass());
-     */
 }
 
-void UHeroMovementComponent::SetActorParameters(float AccelerationP, float MaxSpeedP, float JumpHeightP)
+void UHeroMovementComponent::SetActorParameters(float AccelerationP, float MaxSpeedP, float JumpHeightP, int NumberOfJumpsP,
+                                                float AirAccelerationP)
 {
     Acceleration = AccelerationP;
     MaxSpeed = MaxSpeedP;
     JumpHeight = JumpHeightP;
+    NumberOfJumps = NumberOfJumpsP;
+    AirAcceleration = AirAccelerationP;
 }
 
 void UHeroMovementComponent::SetIsJumpInput(bool bJumpInputP)
@@ -72,7 +68,23 @@ void UHeroMovementComponent::SetIsJumpInput(bool bJumpInputP)
 
 void UHeroMovementComponent::Jump(USphereComponent* Root)
 {
-    const float Impulse = FMath::Sqrt(-2.0f * GetWorld()->GetGravityZ() * JumpHeight);
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Impulse: %f"), Impulse));
+    //GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Impulse: %f"), Impulse));
+    (Cast<AHeroPhysics>(PawnOwner))->SetGrounded(false);
+    float Impulse = FMath::Sqrt(-2.0f * GetWorld()->GetGravityZ() * JumpHeight);
+    // Take into account previous jump
+    FVector LinearVelocity = Root->GetPhysicsLinearVelocity();
+    if(LinearVelocity.Z > 0)
+    {
+        Impulse = FMath::Max( Impulse - LinearVelocity.Z, 0.0f);
+    }
+    // Add jump impulse
     Root->AddImpulse(FVector::UpVector * Impulse * Root->GetBodyInstance()->GetBodyMass());
+
+    // Limit jump speed
+    LinearVelocity = Root->GetPhysicsLinearVelocity();
+    if(LinearVelocity.Z > Impulse)
+    {
+        LinearVelocity.Z = Impulse;
+    }
+    Root->SetPhysicsLinearVelocity(LinearVelocity);
 }

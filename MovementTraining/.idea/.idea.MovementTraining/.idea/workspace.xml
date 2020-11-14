@@ -24,6 +24,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1106d457-5bd9-4f24-9be4-f2d0579cb952" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MovementTraining.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MovementTraining/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MovementTraining/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Blueprints/BP_HeroPhysics.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/BP_HeroPhysics.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MovementTraining/HeroMovementComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MovementTraining/HeroMovementComponent.cpp" afterDir="false" />
@@ -40,6 +41,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Experimental/GeometryProcessing/Source/GeometryAlgorithms/Private/ThirdParty/GTEngine/Mathematics/GteCircle3.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Plugins/Developer/RiderLink/Source/RD/include/thirdparty/spdlog/details/thread_pool.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Epic Games/UE_4.25/Engine/Source/Runtime/Mac/CoreAudio/Public/CoreAudioDevice.h" root0="SKIP_HIGHLIGHTING" />
@@ -59,8 +61,8 @@
         <option value="$PROJECT_DIR$/Source/MovementTraining/HeroBase.cpp" />
         <option value="$PROJECT_DIR$/Source/MovementTraining/HeroMovementComponent.h" />
         <option value="$PROJECT_DIR$/Source/MovementTraining/HeroMovementComponent.cpp" />
-        <option value="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.cpp" />
         <option value="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.h" />
+        <option value="$PROJECT_DIR$/Source/MovementTraining/HeroPhysics.cpp" />
       </list>
     </option>
   </component>
@@ -310,7 +312,7 @@
       <workItem from="1605337151141" duration="4490000" />
       <workItem from="1605341754575" duration="1333000" />
       <workItem from="1605343117232" duration="16385000" />
-      <workItem from="1605371576885" duration="2380000" />
+      <workItem from="1605371576885" duration="5839000" />
     </task>
     <task id="LOCAL-00001" summary="Intended way to code movement component">
       <created>1605353499090</created>
@@ -319,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605353499090</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Not very efficient grounded method for hump">
+      <created>1605374115602</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605374115602</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +352,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Intended way to code movement component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Intended way to code movement component" />
+    <MESSAGE value="Not very efficient grounded method for hump" />
+    <option name="LAST_COMMIT_MESSAGE" value="Not very efficient grounded method for hump" />
   </component>
   <component name="WindowStateProjectService">
     <state x="714" y="409" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1605343085510">
@@ -426,10 +436,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1605370807307" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1605353688354">
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1605374117322">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1605353688354" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1605374117322" />
     <state x="638" y="139" width="976" height="801" key="find.popup" timestamp="1605370354332">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
