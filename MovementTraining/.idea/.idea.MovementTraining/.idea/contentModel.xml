@@ -43411,10 +43411,13 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Source" t="Include">
         <e p="MovementTraining" t="Include">
+          <e p="Actors" t="Include" />
           <e p="Hero.cpp" t="Include" />
           <e p="Hero.h" t="Include" />
           <e p="HeroBase.cpp" t="Include" />
           <e p="HeroBase.h" t="Include" />
+          <e p="HeroMovementComponent.cpp" t="Include" />
+          <e p="HeroMovementComponent.h" t="Include" />
           <e p="HeroPhysics.cpp" t="Include" />
           <e p="HeroPhysics.h" t="Include" />
           <e p="MovementTraining.Build.cs" t="Include" />

@@ -46,3 +46,9 @@ void AHero::Tick(float DeltaTime)
 	SetActorRelativeLocation(NewLocation);
 }
 
+void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	InputComponent->BindAxis("Horizontal", this, &AHero::SetHorizontalInput);
+	InputComponent->BindAxis("Vertical", this, &AHero::SetVerticalInput);
+}
+

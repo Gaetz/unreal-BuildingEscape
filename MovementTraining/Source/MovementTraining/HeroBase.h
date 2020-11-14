@@ -23,15 +23,8 @@ protected:
 
 	UPROPERTY(EditAnywhere)
 	UNiagaraComponent* ParticleSystem;
-
-	UPROPERTY(EditAnywhere)
-	float AccelerationFactor = 100.0f; 
-	
-	UPROPERTY(EditAnywhere)
-	float MaxSpeed = 4000.0f; 
 	
 	FVector2D PlayerInput = FVector2D::ZeroVector;
-	FVector Velocity = FVector::ZeroVector;
 	
 public:
 	// Sets default values for this pawn's properties
@@ -40,18 +33,5 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-protected:
-	virtual void SetHorizontalInput(const float AxisValue);
-	virtual void SetVerticalInput(const float AxisValue);
-	float MoveTowards(const float Current, const float Target, const float MaxDelta) const;
+	static float MoveTowards(const float Current, const float Target, const float MaxDelta);
 };
-
-inline void AHeroBase::SetHorizontalInput(const float AxisValue)
-{
-	PlayerInput.X = AxisValue;
-}
-
-inline void AHeroBase::SetVerticalInput(const float AxisValue)
-{
-	PlayerInput.Y = AxisValue;
-}
