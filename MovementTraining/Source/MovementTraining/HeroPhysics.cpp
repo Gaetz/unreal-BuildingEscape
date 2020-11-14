@@ -19,6 +19,7 @@ void AHeroPhysics::BeginPlay()
     Super::BeginPlay();
     Root->SetSimulatePhysics(true);
     Root->SetNotifyRigidBodyCollision(true);
+    Movement->SetActorParameters(Acceleration, MaxSpeed, JumpHeight);
     OnActorHit.AddDynamic(this, &AHeroPhysics::OnHit);
 }
 
@@ -26,26 +27,40 @@ void AHeroPhysics::Tick(float DeltaTime)
 {    
     Super::Tick(DeltaTime);
 
-
+    
+    
+/*
     if(IsJumpInput)
     {
         Jump();
         IsJumpInput = false;
     }
 
+
+    */
     // Reset hit
-    IsGrounded = false;
+    bGrounded = false;
 }
 
 void AHeroPhysics::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent);
-    PlayerInputComponent->BindAxis("Vertical", this, &AHeroPhysics::MoveForward);
-    PlayerInputComponent->BindAxis("Horizontal", this, &AHeroPhysics::MoveRight);
-    PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AHeroPhysics::InputJump);
+    PlayerInputComponent->BindAxis("Vertical", this, &AHeroPhysics::OnMoveForward);
+    PlayerInputComponent->BindAxis("Horizontal", this, &AHeroPhysics::OnMoveRight);
+    PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AHeroPhysics::OnJump);
 }
 
-void AHeroPhysics::MoveForward(float AxisValue)
+bool AHeroPhysics::IsGrounded() const
+{
+    return bGrounded;
+}
+
+USphereComponent* AHeroPhysics::GetRootComponent()
+{
+    return Root;
+}
+
+void AHeroPhysics::OnMoveForward(float AxisValue)
 {
     if (Movement && (Movement->UpdatedComponent == RootComponent))
     {
@@ -53,7 +68,7 @@ void AHeroPhysics::MoveForward(float AxisValue)
     }
 }
 
-void AHeroPhysics::MoveRight(float AxisValue)
+void AHeroPhysics::OnMoveRight(float AxisValue)
 {
     if (Movement && (Movement->UpdatedComponent == RootComponent))
     {
@@ -66,24 +81,21 @@ UPawnMovementComponent* AHeroPhysics::GetMovementComponent() const
     return Movement;
 }
 
-void AHeroPhysics::InputJump()
-{
-    IsJumpInput = true;
-}
 
-void AHeroPhysics::Jump()
+void AHeroPhysics::OnJump()
 {
-    if(IsGrounded)
+    if (Movement && (Movement->UpdatedComponent == RootComponent))
     {
-        const float Impulse = FMath::Sqrt(-2.0f * GetWorld()->GetGravityZ() * JumpHeight);
-        //GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Impulse: %f"), Impulse));
-        Root->AddImpulse(FVector::UpVector * Impulse * Root->GetBodyInstance()->GetBodyMass());
+        Movement->SetIsJumpInput(true);
     }
 }
 
 void AHeroPhysics::OnHit(AActor* Self, AActor* Other, FVector Normal, const FHitResult& Hit)
 {
-    IsGrounded = true;
+    if(FVector::DotProduct(Normal, GetActorUpVector()) > 0.99)
+    {
+        bGrounded = true;
+    }
 }
 
 /*

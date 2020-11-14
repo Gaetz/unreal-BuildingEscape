@@ -26,25 +26,31 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
+	bool IsGrounded() const;
+
+	USphereComponent* GetRootComponent();
+	
 private:
 	// Move
-	
 	UPROPERTY()
 	class UHeroMovementComponent* Movement;
-	void MoveForward(float AxisValue);
-	void MoveRight(float AxisValue);
-	virtual UPawnMovementComponent* GetMovementComponent() const override;
 
-	// Jump
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Movement, meta = (AllowPrivateAccess = "true"))
+	float Acceleration = 1000;
 	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Movement, meta = (AllowPrivateAccess = "true"))
+	float MaxSpeed = 2000;
+
+	void OnMoveForward(float AxisValue);
+	void OnMoveRight(float AxisValue);
+	virtual UPawnMovementComponent* GetMovementComponent() const override;
+	
+	// Jump
 	UPROPERTY(EditAnywhere, Category="Movement")
 	float JumpHeight;
 	
-	bool IsJumpInput;
-	void InputJump();
-	void Jump();
-
-	bool IsGrounded;
+	void OnJump();
+	bool bGrounded;
 
 	// Collisions
 	

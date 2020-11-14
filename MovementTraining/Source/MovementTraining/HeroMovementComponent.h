@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
 #include "GameFramework/PawnMovementComponent.h"
 #include "HeroMovementComponent.generated.h"
 
 /**
- * 
+ * Movement component for a HeroPhysics
  */
 UCLASS()
 class MOVEMENTTRAINING_API UHeroMovementComponent : public UPawnMovementComponent
@@ -15,16 +16,19 @@ class MOVEMENTTRAINING_API UHeroMovementComponent : public UPawnMovementComponen
 	GENERATED_BODY()
 public:
 	virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override;
-
-
-
+	void SetActorParameters(float AccelerationP, float MaxSpeedP, float JumpHeightP);
+	void SetIsJumpInput(bool bJumpInputP);
+	
 private:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Movement, meta = (AllowPrivateAccess = "true"))
-	float Acceleration = 1000;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Movement, meta = (AllowPrivateAccess = "true"))
-	float MaxSpeed = 2000;
-	
 	FVector Velocity = FVector::ZeroVector;
+	bool bJumpInput = false;
 	
+	UPROPERTY()
+	float Acceleration;
+	UPROPERTY()
+	float MaxSpeed;
+	UPROPERTY()
+	float JumpHeight;
+
+	void Jump(class USphereComponent* Root);
 };

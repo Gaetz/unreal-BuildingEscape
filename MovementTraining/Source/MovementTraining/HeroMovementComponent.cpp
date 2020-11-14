@@ -3,9 +3,11 @@
 
 #include "HeroMovementComponent.h"
 #include "HeroBase.h"
+#include "HeroPhysics.h"
+#include "Components/SphereComponent.h"
 
 void UHeroMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
-    FActorComponentTickFunction* ThisTickFunction)
+                                           FActorComponentTickFunction* ThisTickFunction)
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
@@ -32,6 +34,14 @@ void UHeroMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
         }
     }
 
+    // Jump
+    AHeroPhysics* Owner = Cast<AHeroPhysics>(PawnOwner);
+    if (bJumpInput && Owner->IsGrounded())
+    {
+        //Owner->SetJumpInput(false);
+        Jump(Owner->GetRootComponent());
+    }
+    bJumpInput = false;
 
     /*
     FVector Input = FVector(PlayerInput.X, PlayerInput.Y, 0);
@@ -46,4 +56,23 @@ void UHeroMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
     
     Root->AddForce(Velocity * Root->GetBodyInstance()->GetBodyMass());
      */
+}
+
+void UHeroMovementComponent::SetActorParameters(float AccelerationP, float MaxSpeedP, float JumpHeightP)
+{
+    Acceleration = AccelerationP;
+    MaxSpeed = MaxSpeedP;
+    JumpHeight = JumpHeightP;
+}
+
+void UHeroMovementComponent::SetIsJumpInput(bool bJumpInputP)
+{
+    bJumpInput = bJumpInputP;
+}
+
+void UHeroMovementComponent::Jump(USphereComponent* Root)
+{
+    const float Impulse = FMath::Sqrt(-2.0f * GetWorld()->GetGravityZ() * JumpHeight);
+    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Impulse: %f"), Impulse));
+    Root->AddImpulse(FVector::UpVector * Impulse * Root->GetBodyInstance()->GetBodyMass());
 }
